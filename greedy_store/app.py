@@ -30,7 +30,7 @@ def mergeSort(arr):
     if len(arr) > 1:
 
         # Finding the mid of the array
-        mid = len(arr) // 2
+        mid = len(arr)//2
 
         # Dividing the array elements
         L = arr[:mid]
