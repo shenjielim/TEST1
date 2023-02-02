@@ -9,7 +9,7 @@ def calculate_revenue(items_list, number_of_customers):
     # Code ends here
 
 
-class app:
+class App:
     def __init__(self):
         self.path = "."
 
