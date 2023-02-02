@@ -1,9 +1,9 @@
 from app import app
 
 
-def __main__():
+def main():
     main = app()
     main.run()
 
-
-__main__()
+if __name__ == "__main__":
+    main()
