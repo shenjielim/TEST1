@@ -1,6 +1,7 @@
 import os
 import time
 
+
 # Write your answer here
 def calculate_revenue(items_list, number_of_customers):
     # Modify code below
@@ -27,7 +28,7 @@ class app:
                 result = calculate_revenue(items_list, number_of_customers)
                 toc = time.perf_counter()
                 print(f"List of items end: {items_list}")
-                print("Number of customers: " +  str("{:,}".format(number_of_customers)))
+                print("Number of customers: " + str("{:,}".format(number_of_customers)))
                 print("Returned result: " + str("{:,}".format(result)))
                 print(f'Time taken: {toc - tic:0.4f}s')
                 print()
