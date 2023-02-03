@@ -20,3 +20,9 @@ test_name_3 = "Test case 3"
 start_mrt_3 = "Khatib"
 end_mrt_3 = "Kovan"
 mrt_lines_3 = {"Circle Extension": lines["Circle Extension"], "Orange": lines["Orange"], "Red": lines["Red"], "Purple": lines["Purple"]}
+
+# Test Case 4 Params
+test_name_4 = "Test case 4"
+start_mrt_4 = "Changi Airport"
+end_mrt_4 = "Bukit Panjang"
+mrt_lines_4 = lines
