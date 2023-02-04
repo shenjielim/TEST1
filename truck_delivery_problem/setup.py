@@ -19,8 +19,8 @@ class Setup:
 
     def add_coordinate(self, line, locations):
         split_line = line.strip().split(",")
-        x = split_line[0]
-        y = split_line[1]
+        x = float(split_line[0])
+        y = float(split_line[1])
         locations.append((x, y))
         return locations
 
