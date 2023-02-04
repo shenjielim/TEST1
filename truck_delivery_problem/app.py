@@ -6,7 +6,7 @@ from truck_delivery_problem.setup import setup
 # Write your answer here
 def get_shortest_distance(number_of_trucks, locations):
     # Modify code below
-    return []
+    return [[1,2],[3,4]]
     # Code ends here
 
 
@@ -25,7 +25,8 @@ class App:
         tic = time.perf_counter()
         result = get_shortest_distance(self.number_of_trucks, setup.locations[:self.number_of_locations])
         toc = time.perf_counter()
-        print(f"Returned result: {'->'.join(result)}")
+        for i  in range(len(result)):
+            print(f"Returned truck path {i+1}: {' -> '.join([str(x) for x in result[i]])}")
         print(f'Time taken: {toc - tic:0.4f}s')
         print()
         # Pass contents as arguments for test functions
