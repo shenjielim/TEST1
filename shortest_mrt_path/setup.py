@@ -10,7 +10,7 @@ class Setup:
 
     def setup_mrt_lines(self):
         mrt_lines = {}
-        f = open(self.path+ "/data/sg_mrt.csv", "r")
+        f = open(self.path+ "/data/delivery_locations.csv", "r")
         for line in f:
             mrt_lines = self.add_lines(line, mrt_lines)
         self.mrt_lines = mrt_lines

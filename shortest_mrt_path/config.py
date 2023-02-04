@@ -1,7 +1,7 @@
 from setup import setup
 
 # MRT lines
-lines = setup.mrt_lines
+lines = setup.locations
 
 # Test Case 1 Params
 test_name_1 = "Test case 1"
