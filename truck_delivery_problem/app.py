@@ -26,8 +26,6 @@ def get_shortest_distance(number_of_trucks, locations):
     # Code ends here
 
 
-
-
 def mergeSort(arr):
     if len(arr) > 1:
 
@@ -73,6 +71,7 @@ def mergeSort(arr):
             j += 1
             k += 1
 
+
 def calculate_distance(coordinates):
     mergeSort(coordinates)
     distance = 0
@@ -80,10 +79,20 @@ def calculate_distance(coordinates):
         distance += vector_distance(coordinates[location_num], coordinates[location_num + 1])
     return distance
 
+
 def vector_distance(l, r):
     x_diff = (l[0] - r[0])
     y_diff = (l[1] - r[1])
     return (x_diff ** 2 + y_diff ** 2) ** 0.5
+
+
+def calculate_total_distance(coordinates_list):
+    distance = 0
+    for location_num in range(len(coordinates_list)):
+        for index in range(len(coordinates_list[location_num]) - 1):
+            distance += vector_distance(coordinates_list[location_num][index],
+                                        coordinates_list[location_num][index + 1])
+    return distance
 
 
 class App:
@@ -103,6 +112,7 @@ class App:
         toc = time.perf_counter()
         for i in range(len(result)):
             print(f"Returned truck path {i + 1}: {' -> '.join([str(x) for x in result[i]])}")
+        print(f'Total distance : {calculate_total_distance(result)}')
         print(f'Time taken: {toc - tic:0.4f}s')
         print()
         # Pass contents as arguments for test functions
