@@ -4,6 +4,7 @@ from truck_delivery_problem.setup import setup
 import numpy as np
 from sklearn.cluster import KMeans
 
+
 # Write your answer here
 def get_shortest_distance(number_of_trucks, locations):
     # Modify code below
@@ -21,15 +22,15 @@ def get_shortest_distance(number_of_trucks, locations):
         distance_dict[cluster_num] = calculate_distance(locations_dict[cluster_num])
     print(distance_dict)
 
-
-    return [locations_dict.values()]
+    return [x for x in locations_dict.values()]
     # Code ends here
+
 
 def calculate_distance(coordinates):
     mergeSort(coordinates)
     distance = 0
-    for location_num in range(len(coordinates)-1):
-        distance += vector_distance(coordinates[location_num], coordinates[location_num+1])
+    for location_num in range(len(coordinates) - 1):
+        distance += vector_distance(coordinates[location_num], coordinates[location_num + 1])
     return distance
 
 
@@ -37,7 +38,7 @@ def mergeSort(arr):
     if len(arr) > 1:
 
         # Finding the mid of the array
-        mid = len(arr)//2
+        mid = len(arr) // 2
 
         # Dividing the array elements
         L = arr[:mid]
@@ -55,11 +56,11 @@ def mergeSort(arr):
 
         # Copy data to temp arrays L[] and R[]
         while i < len(L) and j < len(R):
-            current_k = arr[k-1]
+            current_k = arr[k - 1]
             if i + j == 0:
                 arr[k] = R[j]
-                j+=1
-            elif vector_distance(L[i],current_k) <= vector_distance(R[j], current_k):
+                j += 1
+            elif vector_distance(L[i], current_k) <= vector_distance(R[j], current_k):
                 arr[k] = L[i]
                 i += 1
             else:
@@ -78,10 +79,11 @@ def mergeSort(arr):
             j += 1
             k += 1
 
+
 def vector_distance(l, r):
     x_diff = (l[0] - r[0])
     y_diff = (l[1] - r[1])
-    return (x_diff**2 + y_diff**2)**0.5
+    return (x_diff ** 2 + y_diff ** 2) ** 0.5
 
 
 class App:
@@ -93,14 +95,14 @@ class App:
     def run(self):
         # For loop each test case and read contents
         print("Executing " + self.test_name)
-        print(f"Number of trucks: {self.number_of_trucks}" )
+        print(f"Number of trucks: {self.number_of_trucks}")
         print(f"Number of locations: {self.number_of_locations}")
         print(f"Coordinates: {setup.locations[:self.number_of_locations]}")
         tic = time.perf_counter()
         result = get_shortest_distance(self.number_of_trucks, setup.locations[:self.number_of_locations])
         toc = time.perf_counter()
-        for i  in range(len(result)):
-            print(f"Returned truck path {i+1}: {' -> '.join([str(x) for x in result[i]])}")
+        for i in range(len(result)):
+            print(f"Returned truck path {i + 1}: {' -> '.join([str(x) for x in result[i]])}")
         print(f'Time taken: {toc - tic:0.4f}s')
         print()
         # Pass contents as arguments for test functions
