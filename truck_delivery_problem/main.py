@@ -21,11 +21,11 @@ def main():
         NUMBER_OF_LOCATIONS_3)
     app3.run()
 
-    app4 = App(
-        TEST_NAME_4,
-        NUMBER_OF_TRUCKS_4,
-        NUMBER_OF_LOCATIONS_4)
-    app4.run()
+    # app4 = App(
+    #     TEST_NAME_4,
+    #     NUMBER_OF_TRUCKS_4,
+    #     NUMBER_OF_LOCATIONS_4)
+    # app4.run()
 
 if __name__ == "__main__":
     main()

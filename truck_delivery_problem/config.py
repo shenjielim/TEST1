@@ -4,7 +4,7 @@ NUMBER_OF_COORDINATES = 1000
 # Test case 1 params
 TEST_NAME_1 = "Test Case 1"
 NUMBER_OF_TRUCKS_1 = 1
-NUMBER_OF_LOCATIONS_1 = 5
+NUMBER_OF_LOCATIONS_1 = 15
 
 # Test case 2 params
 TEST_NAME_2 = "Test Case 2"
