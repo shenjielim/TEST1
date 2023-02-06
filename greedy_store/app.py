@@ -10,6 +10,7 @@ def calculate_revenue(items_list, number_of_customers):
     revenue = 0
     current_index = 0
     for customer_num in range(number_of_customers):
+
         current_item = items_list[current_index]
         if current_item < max_quantity:
             current_index = 0
@@ -20,6 +21,9 @@ def calculate_revenue(items_list, number_of_customers):
         # Post purchase
         items_list[current_index] = current_item - 1
         current_index += 1
+
+        if current_index == len(items_list):
+            break
 
     return revenue
     # Code ends here
