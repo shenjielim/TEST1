@@ -26,12 +26,6 @@ def get_shortest_distance(number_of_trucks, locations):
     # Code ends here
 
 
-def calculate_distance(coordinates):
-    mergeSort(coordinates)
-    distance = 0
-    for location_num in range(len(coordinates) - 1):
-        distance += vector_distance(coordinates[location_num], coordinates[location_num + 1])
-    return distance
 
 
 def mergeSort(arr):
@@ -79,6 +73,12 @@ def mergeSort(arr):
             j += 1
             k += 1
 
+def calculate_distance(coordinates):
+    mergeSort(coordinates)
+    distance = 0
+    for location_num in range(len(coordinates) - 1):
+        distance += vector_distance(coordinates[location_num], coordinates[location_num + 1])
+    return distance
 
 def vector_distance(l, r):
     x_diff = (l[0] - r[0])
